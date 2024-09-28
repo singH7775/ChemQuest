@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/styles.css">
+<title>Question Page</title>
+</head>
+<body>
+
+	<p th:utext="${question}" class="dashboard-header"></p>
+
+	<form th:action="@{/student/checkAnswer}" class="answer-submit-form">
+		<input type="text" name="answer" placeholder="answer" maxlength="1" pattern="[AaBbCc]" title="A, B, or C" required>
+		<div class="submit-button">
+			<button type="submit" class="submit-btn">submit</button>
+		</div>
+	</form>
+
+</body>
+</html>
